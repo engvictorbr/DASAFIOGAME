@@ -18,8 +18,26 @@ body {
     margin: 0 auto;
     margin-top: 100px;
     position: relative;
-    background-color: skyblue;
+    background: linear-gradient( skyblue, white);
     overflow:hidden;
+}
+
+.nuvens {
+    position: absolute;
+    margin-top: 40px;
+    width:300px;
+    opacity: 70%;
+    animation: nuvempassa 15s infinite linear;
+
+}
+
+@keyframes nuvempassa {
+    from {
+        right: -50%;
+    }
+    to {
+        right: 100%;
+    }
 }
 
 .cano {
@@ -27,7 +45,7 @@ body {
     bottom: 0;
     width: 80px;
     
-    animation: canovindo 2s infinite linear;
+    animation: canovindo 1.6s infinite linear;
 }
 .chao{
     position: relative;
@@ -36,7 +54,7 @@ body {
     height: 33px; /* Altura da imagem de fundo, mantendo a proporção */
     background-image: url('./images/meuchao.png');
     background-repeat: repeat-x; /* Repete a imagem apenas na horizontal */
-    animation: chaopassando 1.8s infinite linear;
+    animation: chaopassando 1.4s infinite linear;
    }
 @keyframes chaopassando {
     from {
@@ -50,10 +68,11 @@ body {
     width: 90px;
     position: absolute;
     bottom: 33px;
+    left: 70px;
     
 }
 .pula {
-    animation: pula 500ms ease-out;
+    animation: pula 600ms ease-out;
 }
 
 @keyframes canovindo {
@@ -69,13 +88,13 @@ body {
         bottom: 33px;
     }
     40% {
-        bottom: 180px;
+        bottom: 160px;
     }
     50% {
-        bottom: 190px;
+        bottom: 180px;
     }
     60% {
-        bottom: 180px;
+        bottom: 160px;
     }
     100% {
         bottom: 33px;
