@@ -6,8 +6,21 @@ body {
     background-attachment: fixed;
     background-size: 1200px 600px;
 }
-
-
+#botaoreset {
+    background-color: green;
+    color: white;
+    width: 5cm;
+    height: 2cm;
+    font-size: 32pt;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0%;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
 .plataforma {
    margin: 0;
     padding: 0;
@@ -21,16 +34,13 @@ body {
     background: linear-gradient( skyblue, white);
     overflow:hidden;
 }
-
 .nuvens {
     position: absolute;
     margin-top: 40px;
     width:300px;
     opacity: 70%;
     animation: nuvempassa 15s infinite linear;
-
 }
-
 @keyframes nuvempassa {
     from {
         right: -50%;
@@ -39,19 +49,15 @@ body {
         right: 100%;
     }
 }
-
 .cano {
     position: absolute;
     bottom: 0;
     width: 80px;
     right: -100px;
-    
-    
 }
 .canovindo {
    animation: canovindo 1.6s infinite linear; 
 }
-
 @keyframes canovindo {
     from {
         right: -80px;
@@ -67,9 +73,8 @@ body {
     height: 33px; /* Altura da imagem de fundo, mantendo a proporção */
     background-image: url('./images/meuchao.png');
     background-repeat: repeat-x; /* Repete a imagem apenas na horizontal */
-    
-   }
-   .chaopassando{
+    }
+.chaopassando{
     animation: chaopassando 1.4s infinite linear;
    }
 @keyframes chaopassando {
@@ -90,8 +95,6 @@ body {
 .pula {
     animation: pula 600ms ease-out;
 }
-
-
 @keyframes pula {
     0% {
         bottom: 33px;
@@ -116,6 +119,9 @@ p {
     color: black;
     position: absolute;
     font-size: 46px;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 p2 {
     font-family:cursive;
