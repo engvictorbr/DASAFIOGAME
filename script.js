@@ -6,12 +6,13 @@ audioStart = new Audio('./audio/theme.mp3');
 somdepula = new Audio('./audio/pula.mp3');
 audioGameOver = new Audio('./audio/gameover.mp3');
 pontuacao = document.querySelector('pontos');
-var gol = 0;
+var gol = -100;
 
 const start = () => {
     
     document.getElementById("iniciar").style.opacity = "0%";
     document.getElementById("botaoreset").style.opacity = "0%";
+    document.getElementById("botaoreset").style.cursor = "unset";
 
     cano.classList.add('canovindo');
     chao.classList.add('chaopassando');
@@ -29,8 +30,8 @@ const pula = () => {
     }, 600 );
 
     setTimeout(() => {
-        document.getElementById("pontos").innerHTML=`Score: ${gol} pontos`;   
-    }, 600 )
+        document.getElementById("pontos").innerHTML=`Score: ${gol=gol+100} pontos`;   
+    }, 1500 )
 
     somdepula.play();
 }
@@ -56,7 +57,7 @@ const loop = setInterval(() => {
         document.getElementById("iniciar").innerHTML="<strong>GAME OVER</strong>";
         document.getElementById("iniciar").style.fontSize="70px";
         document.getElementById("botaoreset").style.opacity = "100%";
-
+        document.getElementById("botaoreset").style.cursor = "pointer";
 
         function stopAudioStart(){
             audioStart.pause();
@@ -71,9 +72,7 @@ const loop = setInterval(() => {
 
         clearInterval(checkGameOver);
         audioGameOver = null;
-    } else {
-        gol++;
-    }
+    } 
 },10);
 
 document.addEventListener('keydown', pula);
